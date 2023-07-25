@@ -5,11 +5,11 @@
  *
  * Return: no return
  */
-int t_char(va_list om)
+int t_char(va_list va)
 {
 	int c;
 
-	c = va_arg(om, int);
+	c = va_arg(va, int);
 	_putchar(c);
 	return (1);
 }
@@ -19,11 +19,11 @@ int t_char(va_list om)
  *
  * Return: no return
  */
-int t_string(va_list om)
+int t_string(va_list va)
 {
 	int i, j;
 	char n[] = "(null)";
-	char *s = va_arg(om, char *);
+	char *s = va_arg(va, char *);
 
 	if (s == NULL)
 	{
@@ -40,11 +40,11 @@ int t_string(va_list om)
  *@va: the integer to print
  * Return: no return
  */
-int print_number(va_list om)
+int print_number(va_list va)
 {
 	int i, len, r, l;
 	unsigned int abs, num, numt;
-	int n = va_arg(om, int);
+	int n = va_arg(va, int);
 
 	len = 0;
 	i = 0;
